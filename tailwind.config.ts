@@ -21,6 +21,7 @@ const config: Config = {
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         roboto: ["Roboto", "sans-serif"],
+        orbitron: ["Orbitron", "monospace"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -56,8 +57,16 @@ const config: Config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        cyber: {
+          cyan: "#00ffff",
+          magenta: "#ff00ff",
+          electric: "#00ff41",
+          neon: "#ff6b6b",
+          plasma: "#4ecdc4",
+          hologram: "#ff9ff3",
+        },
         evolve: {
-          dark: "#1A1F2C",
+          dark: "#0a0a0f",
           purple: "#9b87f5",
           pink: "#D946EF",
           violet: "#8B5CF6",
@@ -85,12 +94,43 @@ const config: Config = {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.5" },
         },
+        "cyber-pulse": {
+          "0%, 100%": {
+            boxShadow:
+              "0 0 20px rgba(0, 255, 255, 0.4), 0 0 40px rgba(0, 255, 255, 0.2)",
+          },
+          "50%": {
+            boxShadow:
+              "0 0 30px rgba(0, 255, 255, 0.6), 0 0 60px rgba(0, 255, 255, 0.4)",
+          },
+        },
+        "holographic-shift": {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "25%": { backgroundPosition: "100% 50%" },
+          "50%": { backgroundPosition: "50% 100%" },
+          "75%": { backgroundPosition: "50% 0%" },
+        },
+        glitch: {
+          "0%, 100%": { transform: "translate(0)" },
+          "20%": { transform: "translate(-2px, 2px)" },
+          "40%": { transform: "translate(-2px, -2px)" },
+          "60%": { transform: "translate(2px, 2px)" },
+          "80%": { transform: "translate(2px, -2px)" },
+        },
+        "matrix-rain": {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(100vh)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         float: "float 6s ease-in-out infinite",
         "pulse-slow": "pulse 3s ease-in-out infinite",
+        "cyber-pulse": "cyber-pulse 2s ease-in-out infinite",
+        "holographic-shift": "holographic-shift 4s ease-in-out infinite",
+        glitch: "glitch 2s infinite",
+        "matrix-rain": "matrix-rain 3s linear infinite",
       },
     },
   },
